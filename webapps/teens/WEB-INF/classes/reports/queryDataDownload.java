@@ -42,6 +42,8 @@ public class queryDataDownload
             stmt = con.createStatement();
              
             rs = stmt.executeQuery("select * from register");
+	
+	    queryResultsDownload += "firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2\r\n";
 
                 	while (rs.next())
                 	{
