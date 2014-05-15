@@ -45,7 +45,12 @@ public class queryDataDownload
 
                 	while (rs.next())
                 	{
-				queryResultsDownload += rs.getString("firstName")+","+rs.getString("lastName")+","+rs.getString("grade")+rs.getString("age")+","+rs.getString("school")+","+rs.getString("homeaddress")+rs.getString("homecity")+","+rs.getString("homezip")+","+rs.getString("cellularphone")+rs.getString("homephone")+","+rs.getString("studentemail)+","+rs.getString("pgFirst")+rs.getString("pgLast")+","+rs.getString("pgPhone")+","+rs.getString("pgEmail")+rs.getString("session1")+","+rs.getString("session2")+"\r\n";
+				queryResultsDownload += rs.getString("firstName")+","+rs.getString("lastName")+","+rs.getString("grade")+","+rs.getString("age")+",";
+				queryResultsDownload += rs.getString("school")+","+rs.getString("homeaddress")+","+rs.getString("homecity")+",";
+				queryResultsDownload += rs.getString("homezip")+","+rs.getString("cellularphone")+","+rs.getString("homephone")+",";
+				queryResultsDownload += rs.getString("studentemail")+","+rs.getString("pgFirst")+","+rs.getString("pgLast")+","+rs.getString("pgPhone")+",";
+				queryResultsDownload += rs.getString("pgEmail")+","+rs.getString("session1")+","+rs.getString("session2")+"\r\n";
+			
 			}			
 		
 	    stmt.close();
