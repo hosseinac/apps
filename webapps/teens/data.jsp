@@ -8,7 +8,7 @@
 <center>
 <font face=arial color=gold size=5><b><u>Registration Data Access</u></b></font>
 <br><br>
-<form method="post" action="/wcsteens/download">
+<form method="post" action="/teens/download">
 	<center>
 	<table>
 		<tr>	
