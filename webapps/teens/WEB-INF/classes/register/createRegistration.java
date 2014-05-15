@@ -39,7 +39,7 @@ public class createRegistration
 
             stmt = con.createStatement();
              
-            stmt.executeUpdate("insert into register (firstName, lastName, grade, age, school, homeAddress, homeCity, homeZIP, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2) values ('"+firstName+"','"+lastName+"','"+grade+"','"+age+"','"+school+"','"+homeAddress+"','"+homeCity+"','"+homeZIP+"','"+cellularPhone+"','"+homePhone+"','"+studentEmail+"','"+pgFirst+"','"+pgLast+"','"+pgPhone+"','"+pgEmail+"','"+session1+"','"+session2+"')");
+            stmt.executeUpdate("insert into register (firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2) values ('"+firstName+"','"+lastName+"','"+grade+"','"+age+"','"+school+"','"+homeAddress+"','"+homeCity+"','"+homeZIP+"','"+cellularPhone+"','"+homePhone+"','"+studentEmail+"','"+pgFirst+"','"+pgLast+"','"+pgPhone+"','"+pgEmail+"','"+session1+"','"+session2+"')");
             
             registration = "Hello "+firstName+" "+lastName+".  Thank you for registering for the teen summit.";
              
