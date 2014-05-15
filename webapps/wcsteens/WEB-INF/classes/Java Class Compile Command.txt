@@ -1,3 +1,0 @@
-Java compile command to include postgresql driver, servlet, and custom package menu classes:
-
-C:\Tomcat\webapps\scope\WEB-INF\classes>javac -cp .;C:\Tomcat\lib\postgresql-9.2-1003.jdbc4.jar;C:\Tomcat\lib\servlet-api.jar;/menu validateAccount.java
