@@ -42,7 +42,7 @@ var sess4 = "";
 	}
 	else
 	{  
-		$.post('register', function($('#firstName').val(), $('#lastName').val(), $('#grade').val(), $('#age').val(), $('#school').val(), $('#homeAddress').val(), $('#homeCity').val(), $('#homeZIP').val(), $('#cellularPhone').val(), $('#homePhone').val(), $('#studentEmail').val(), $('#pgFirst').val(), $('#pgLast').val(), $('#pgPhone').val(), $('#pgEmail').val(), $('#session1').val(), $('#session2').val(), $('#session3').val(), $('#session4').val() ) { } );
+		$.post('register', $('#firstName').val(), $('#lastName').val(), $('#grade').val(), $('#age').val(), $('#school').val(), $('#homeAddress').val(), $('#homeCity').val(), $('#homeZIP').val(), $('#cellularPhone').val(), $('#homePhone').val(), $('#studentEmail').val(), $('#pgFirst').val(), $('#pgLast').val(), $('#pgPhone').val(), $('#pgEmail').val(), $('#session1').val(), $('#session2').val(), $('#session3').val(), $('#session4').val() );
 		alert("Registration Submitted");
 
 	}
