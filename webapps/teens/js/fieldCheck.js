@@ -42,7 +42,7 @@ var sess4 = "";
 	}
 	else
 	{  
-		$.post('register', $('#firstName').val(), $('#lastName').val(), $('#grade').val(), $('#age').val(), $('#school').val(), $('#homeAddress').val(), $('#homeCity').val(), $('#homeZIP').val(), $('#cellularPhone').val(), $('#homePhone').val(), $('#studentEmail').val(), $('#pgFirst').val(), $('#pgLast').val(), $('#pgPhone').val(), $('#pgEmail').val(), $('#session1').val(), $('#session2').val(), $('#session3').val(), $('#session4').val() );
+		$.post('register', $('#firstName').serialize(), $('#lastName').serialize(), $('#grade').serialize(), $('#age').serialize(), $('#school').serialize(), $('#homeAddress').serialize(), $('#homeCity').serialize(), $('#homeZIP').serialize(), $('#cellularPhone').serialize(), $('#homePhone').serialize(), $('#studentEmail').serialize(), $('#pgFirst').serialize(), $('#pgLast').serialize(), $('#pgPhone').serialize(), $('#pgEmail').serialize(), $('#session1').serialize(), $('#session2').serialize(), $('#session3').serialize(), $('#session4').serialize() );
 		alert("Registration Submitted");
 
 	}
