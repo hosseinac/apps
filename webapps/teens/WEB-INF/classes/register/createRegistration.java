@@ -21,7 +21,7 @@ public class createRegistration
 {
     String registration = "";    
 
-    public createRegistration(String firstName, String lastName, String grade, String age, String school, String homeAddress, String homeCity, String homeZIP, String cellularPhone, String homePhone, String studentEmail, String pgFirst, String pgLast, String pgPhone, String pgEmail, String session1, String session2) 
+    public createRegistration(String firstName, String lastName, String grade, String age, String school, String homeAddress, String homeCity, String homeZIP, String cellularPhone, String homePhone, String studentEmail, String pgFirst, String pgLast, String pgPhone, String pgEmail, String session1, String session2, String session3, String session4) 
     {
 	Context ctx = null;
        	Connection con = null;

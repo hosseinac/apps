@@ -33,11 +33,13 @@ public class registerController extends HttpServlet
 	String pgEmail = request.getParameter("pgEmail");
 	String session1 = request.getParameter("session1");
 	String session2 = request.getParameter("session2");
-	
+	String session3 = request.getParameter("session3");
+	String session4 = request.getParameter("session4");
+
 	//response.setContentType("text/event-stream");   
  	//response.setCharacterEncoding("UTF-8");
  	
-	createRegistration registration = new createRegistration(firstName, lastName, grade, age, school, homeAddress, homeCity, homeZIP, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2);
+	createRegistration registration = new createRegistration(firstName, lastName, grade, age, school, homeAddress, homeCity, homeZIP, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2, session3, session4);
 	session.setAttribute("registration", registration);
 	String address = "createRegistration.jsp";
 	RequestDispatcher rd = request.getRequestDispatcher(address);
