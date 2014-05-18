@@ -16,7 +16,7 @@ var sess4 = "";
 	}
 	if ( $('#session2').val() == "None" )
 	{
-		 sess2 += "2 ";
+		 sess2 = "2 ";
 	
 	}
 
@@ -27,7 +27,7 @@ var sess4 = "";
 	}
 	if ( $('#session4').val() == "None" )
 	{
-		 sess3 += "4 ";
+		 sess4 = "4 ";
 	
 	}
 	
@@ -43,7 +43,7 @@ var sess4 = "";
 	else
 	{  
 		$.post('/teens/register', $('#firstName').serialize(), $('#lastName').serialize(), $('#grade').serialize(), $('#age').serialize(), $('#school').serialize(), $('#homeAddress').serialize(), $('#homeCity').serialize(), $('#homeZIP').serialize(), $('#cellularPhone').serialize(), $('#homePhone').serialize(), $('#studentEmail').serialize(), $('#pgFirst').serialize(), $('#pgLast').serialize(), $('#pgPhone').serialize(), $('#pgEmail').serialize(), $('#session1').serialize(), $('#session2').serialize(), $('#session3').serialize(), $('#session4').serialize() );
-		alert("Registration Submitted");
+		alert(responseData);
 
 	}
 

@@ -1,4 +1,5 @@
 import java.io.*;
+
 import java.net.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -35,15 +36,22 @@ public class registerController extends HttpServlet
 	String session2 = request.getParameter("session2");
 	String session3 = request.getParameter("session3");
 	String session4 = request.getParameter("session4");
+	String responseData = (String)session.getAttribute("registration");
 
-	//response.setContentType("text/event-stream");   
- 	//response.setCharacterEncoding("UTF-8");
- 	
+	response.setContentType("text/event-stream");   
+ 	response.setCharacterEncoding("UTF-8");
+	
+
 	createRegistration registration = new createRegistration(firstName, lastName, grade, age, school, homeAddress, homeCity, homeZIP, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2, session3, session4);
 	session.setAttribute("registration", registration);
+
+
+	response.getWriter().write(responseData);
+
 	String address = "createRegistration.jsp";
 	RequestDispatcher rd = request.getRequestDispatcher(address);
 	rd.forward(request, response);
+
 	
     }
 
