@@ -75,7 +75,6 @@ border:6px solid gold;
 	</center>
 	<br>
 
-<form method="post" action="/teens/register">
 	<center>
 	<font face=arial color=gold size=6><b>Student Registration</font>
 	<table>
@@ -169,7 +168,7 @@ border:6px solid gold;
 	<br>
 	<input type=button onclick="register()" value="Submit Registration">
 	</center>
-</form>
+
 </div>
 </div>
 
