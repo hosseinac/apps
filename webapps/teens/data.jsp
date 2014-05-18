@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
 
+<head>
+<link href="layout.css" rel="stylesheet" type="text/css">
 </head>
 
 <body bgcolor=navy>
 <center>
+<div id="element0">
+<br>
+<div id="element1">
 <font face=arial color=gold size=5><b><u>Registration Data Access</u></b></font>
 <br><br>
 <form method="post" action="/teens/download">
@@ -20,6 +24,7 @@
 	<input type=submit value="Download Data">
 	</center>
 </form>
-
+</div>
+</div>
 </body>
 </html>

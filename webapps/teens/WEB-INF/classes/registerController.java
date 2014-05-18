@@ -14,8 +14,8 @@ public class registerController extends HttpServlet
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
     {
-	
- 	HttpSession session = request.getSession(false);
+
+	HttpSession session = request.getSession(false);
 	String firstName = request.getParameter("firstName");
 	String lastName = request.getParameter("lastName");
 	String grade = request.getParameter("grade");
@@ -33,7 +33,10 @@ public class registerController extends HttpServlet
 	String pgEmail = request.getParameter("pgEmail");
 	String session1 = request.getParameter("session1");
 	String session2 = request.getParameter("session2");
-
+	
+	//response.setContentType("text/event-stream");   
+ 	//response.setCharacterEncoding("UTF-8");
+ 	
 	createRegistration registration = new createRegistration(firstName, lastName, grade, age, school, homeAddress, homeCity, homeZIP, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2);
 	session.setAttribute("registration", registration);
 	String address = "createRegistration.jsp";
