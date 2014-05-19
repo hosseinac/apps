@@ -9,6 +9,8 @@ var sess2 = "";
 var sess3 = "";
 var sess4 = "";
 
+var dataString = "firstName="+$('#firstName').val()+"&lastName="+$('#lastName').val()+"&grade="+$('#grade').val();
+
 	if ( $('#session1').val() == "None" )
 	{
 		sess1 = "1 ";
@@ -45,22 +47,22 @@ var sess4 = "";
 		//var form = $('#form0');
 		//form.submit(function () {
  
-//		$.ajax({
-//				type: form.attr('method'),
-//				url: form.attr('action'),
-//				data: form.serialize(),
-//				success: function (data) {
-//				var result=data;
-//				$('#status').text(result);
-//
-//				}
-//			});
- //	
-//			return false;
-//		});
+		$.ajax({
+				type:"post",
+ 				url: "/teens/register",
+ 				data:dataString,
+ 				success: function (msg) {
 
-		$.post('/teens/register', $('#firstName').serialize(), $('#lastName').serialize(), $('#grade').serialize(), $('#age').serialize(), $('#school').serialize(), $('#homeAddress').serialize(), $('#homeCity').serialize(), $('#homeZIP').serialize(), $('#cellularPhone').serialize(), $('#homePhone').serialize(), $('#studentEmail').serialize(), $('#pgFirst').serialize(), $('#pgLast').serialize(), $('#pgPhone').serialize(), $('#pgEmail').serialize(), $('#session1').serialize(), $('#session2').serialize(), $('#session3').serialize(), $('#session4').serialize(), function(responseText) { 
-                $('#status').text(responseText); } );
+				$('#status').text(msg);
+
+				}
+			});
+	
+			//return false;
+		//});
+
+//		$.post('/teens/register', $('#firstName').serialize(), $('#lastName').serialize(), $('#grade').serialize(), $('#age').serialize(), $('#school').serialize(), $('#homeAddress').serialize(), $('#homeCity').serialize(), $('#homeZIP').serialize(), $('#cellularPhone').serialize(), $('#homePhone').serialize(), $('#studentEmail').serialize(), $('#pgFirst').serialize(), $('#pgLast').serialize(), $('#pgPhone').serialize(), $('#pgEmail').serialize(), $('#session1').serialize(), $('#session2').serialize(), $('#session3').serialize(), $('#session4').serialize(), function(responseText) { 
+//                $('#status').text(responseText); } );
 
 		//alert("Submitted");
 		
