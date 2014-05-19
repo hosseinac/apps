@@ -8,6 +8,7 @@ var sess1 = "";
 var sess2 = "";
 var sess3 = "";
 var sess4 = "";
+var regStatus ="";
 
 var dataString = "firstName="+$('#firstName').val()+"&lastName="+$('#lastName').val()+"&grade="+$('#grade').val()+"&age="+$('#age').val()+"&school="+$('#school').val()+"&homeAddress="+$('#homeAddress').val()+"&homeCity="+$('#homeCity').val()+"&homeZIP="+$('#homeZIP').val()+"&cellularPhone="+$('#cellularPhone').val()+"&homePhone="+$('#homePhone').val()+"&studentEmail="+$('#studentEmail').val()+"&pgFirst="+$('#pgFirst').val()+"&pgLast="+$('#pgLast').val()+"&pgPhone="+$('#pgPhone').val()+"&pgEmail="+$('#pgEmail').val()+"&session1="+$('#session1').val()+"&session2="+$('#session2').val()+"&session3="+$('#session3').val()+"&session4="+$('#session4').val();
 
@@ -51,10 +52,21 @@ var dataString = "firstName="+$('#firstName').val()+"&lastName="+$('#lastName').
  				data:dataString,
  				success: function (msg) {
 
-				$('#status').text(msg);
+				regStatus = msg; //$('#status').text(msg);
 
 				}
 			});
+
+		if ( regStatus == "SUCCESS" )
+		{
+
+			document.write("Hello "+firstName+" "+lastName+". Thank you for registering for the teen summit.");
+			//window.location.replace("/teens/createRegistration.jsp");
+		}
+		else
+		{
+			alert(regStatus);
+		}
 
 	}
 
