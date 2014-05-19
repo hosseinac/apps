@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,8 +77,11 @@ border:6px solid gold;
 	<br>
 
 	<center>
+	
+	<font face=arial color=gold size=6>
 	<div id="status"></div>
-	<font face=arial color=gold size=6><b>Student Registration</font>
+	<b>Student Registration
+	</font>
 	<table>
 		<tr>	
 			<td><input type=text size=30 id="firstName"></td>
@@ -149,7 +153,6 @@ border:6px solid gold;
 			</td>
 			<td><center><font color=gold><div id="sessStat3"></div></font></td>
 			<td><center>
-				
 				<select id="session3">
 					<option value="None">Select ...</option>
 					<option value="Financial Literacy">Financial Literacy</option>
@@ -157,7 +160,6 @@ border:6px solid gold;
 			</td>
 			<td><center><font color=gold><div id="sessStat4"></div></font></td>
 			<td><center>
-				
 				<select id="session4">
 					<option value="None">Select ...</option>
 					<option value="Financial Literacy">Financial Literacy</option>
@@ -172,7 +174,6 @@ border:6px solid gold;
 
 </div>
 </div>
-
 
 </body>
 </html>
