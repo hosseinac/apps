@@ -61,9 +61,9 @@ var sess4 = "";
 
 
 		$.post('/teens/register', $('#firstName').serialize(), $('#lastName').serialize(), $('#grade').serialize(), $('#age').serialize(), $('#school').serialize(), $('#homeAddress').serialize(), $('#homeCity').serialize(), $('#homeZIP').serialize(), $('#cellularPhone').serialize(), $('#homePhone').serialize(), $('#studentEmail').serialize(), $('#pgFirst').serialize(), $('#pgLast').serialize(), $('#pgPhone').serialize(), $('#pgEmail').serialize(), $('#session1').serialize(), $('#session2').serialize(), $('#session3').serialize(), $('#session4').serialize(), function(responseData) { 
-                $('#status').text(data) } );
+                alert($('#status').text(data)); } );
 
-		alert("Submitted");
+		//alert("Submitted");
 		
 
 	}
