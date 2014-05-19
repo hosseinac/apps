@@ -82,6 +82,7 @@ border:6px solid gold;
 	<div id="status"></div>
 	<b>Student Registration
 	</font>
+	<form name="form0" method="POST" action="/teens/register" id="form0">
 	<table>
 		<tr>	
 			<td><input type=text size=30 id="firstName"></td>
@@ -174,6 +175,6 @@ border:6px solid gold;
 
 </div>
 </div>
-
+</form>
 </body>
 </html>
