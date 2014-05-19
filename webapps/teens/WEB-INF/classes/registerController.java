@@ -37,9 +37,9 @@ public class registerController extends HttpServlet
  	response.setCharacterEncoding("UTF-8");
 
 	createRegistration registration = new createRegistration(firstName, lastName, grade, age, school, homeAddress, homeCity, homeZIP, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2, session3, session4);
-	session.setAttribute("registration", registration);
+	//session.setAttribute("registration", registration);
 
-	String status = (String)session.getAttribute("registration");
+	String status = registration.getRegistration();
 
 	response.getWriter().write(status);
 
