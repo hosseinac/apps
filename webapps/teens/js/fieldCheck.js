@@ -42,29 +42,28 @@ var sess4 = "";
 	}
 	else
 	{  
-		var form = $('#form0');
-		form.submit(function () {
+		//var form = $('#form0');
+		//form.submit(function () {
  
-		$.ajax({
-				type: form.attr('method'),
-				url: form.attr('action'),
-				data: form.serialize(),
-				success: function (data) {
-				var result=data;
-				$('#status').text(result);
- 
-				}
-			});
- 	
-			return false;
-		});
+//		$.ajax({
+//				type: form.attr('method'),
+//				url: form.attr('action'),
+//				data: form.serialize(),
+//				success: function (data) {
+//				var result=data;
+//				$('#status').text(result);
+//
+//				}
+//			});
+ //	
+//			return false;
+//		});
 
 
+		$.post('/teens/register', $('#firstName').serialize(), $('#lastName').serialize(), $('#grade').serialize(), $('#age').serialize(), $('#school').serialize(), $('#homeAddress').serialize(), $('#homeCity').serialize(), $('#homeZIP').serialize(), $('#cellularPhone').serialize(), $('#homePhone').serialize(), $('#studentEmail').serialize(), $('#pgFirst').serialize(), $('#pgLast').serialize(), $('#pgPhone').serialize(), $('#pgEmail').serialize(), $('#session1').serialize(), $('#session2').serialize(), $('#session3').serialize(), $('#session4').serialize(), function(responseData) { 
+                $('#status').text(data) } );
 
-		//$.post('/teens/register', $('#firstName').serialize(), $('#lastName').serialize(), $('#grade').serialize(), $('#age').serialize(), $('#school').serialize(), $('#homeAddress').serialize(), $('#homeCity').serialize(), $('#homeZIP').serialize(), $('#cellularPhone').serialize(), $('#homePhone').serialize(), $('#studentEmail').serialize(), $('#pgFirst').serialize(), $('#pgLast').serialize(), $('#pgPhone').serialize(), $('#pgEmail').serialize(), $('#session1').serialize(), $('#session2').serialize(), $('#session3').serialize(), $('#session4').serialize(), function(responseData) { 
-                  //$('#status').text(responseData) } );
-
-		//alert("Submitted");
+		alert("Submitted");
 		
 
 	}

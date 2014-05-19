@@ -42,9 +42,9 @@ public class registerController extends HttpServlet
 	PrintWriter out = response.getWriter();
 	createRegistration registration = new createRegistration(firstName, lastName, grade, age, school, homeAddress, homeCity, homeZIP, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2, session3, session4);
 	session.setAttribute("registration", registration);
-	String data = (String)session.getAttribute("registration");
+	//String data = (String)session.getAttribute("registration");
 
-	out.println(data);
+	out.println((String)session.getAttribute("registration"));
 
 	//String address = "createRegistration.jsp";
 	//RequestDispatcher rd = request.getRequestDispatcher(address);
