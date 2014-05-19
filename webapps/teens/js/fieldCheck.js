@@ -53,20 +53,21 @@ var dataString = "firstName="+$('#firstName').val()+"&lastName="+$('#lastName').
  				success: function (msg) {
 
 				regStatus = msg; //$('#status').text(msg);
+				
+					if ( regStatus == "SUCCESS" )
+					{
+	
+						document.write("Hello "+firstName+" "+lastName+". Thank you for registering for the teen summit.");
+						//window.location.replace("/teens/createRegistration.jsp");
+					}
+					else
+					{
+						alert(regStatus);
+					}
 
 				}
 			});
 
-		if ( regStatus == "SUCCESS" )
-		{
-
-			document.write("Hello "+firstName+" "+lastName+". Thank you for registering for the teen summit.");
-			//window.location.replace("/teens/createRegistration.jsp");
-		}
-		else
-		{
-			alert(regStatus);
-		}
 
 	}
 
