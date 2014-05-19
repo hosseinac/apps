@@ -9,7 +9,7 @@ var sess2 = "";
 var sess3 = "";
 var sess4 = "";
 
-var dataString = "firstName="+$('#firstName').val()+"&lastName="+$('#lastName').val()+"&grade="+$('#grade').val();
+var dataString = "firstName="+$('#firstName').val()+"&lastName="+$('#lastName').val()+"&grade="+$('#grade').val()+"&age="+$('#age').val()+"&school="+$('#school').val()+"&homeAddress="+$('#homeAddress').val()+"&homeCity="+$('#homeCity').val()+"&homeZIP="+$('#homeZIP').val()+"&cellularPhone="+$('#cellularPhone').val()+"&homePhone="+$('#homePhone').val()+"&studentEmail="+$('#studentEmail').val()+"&pgFirst="+$('#pgFirst').val()+"&pgLast="+$('#pgLast').val()+"&pgPhone="+$('#pgPhone').val()+"&pgEmail="+$('#pgEmail').val()+"&session1="+$('#session1').val()+"&session2="+$('#session2').val()+"&session3="+$('#session3').val()+"&session4="+$('#session4').val();
 
 	if ( $('#session1').val() == "None" )
 	{
@@ -44,9 +44,7 @@ var dataString = "firstName="+$('#firstName').val()+"&lastName="+$('#lastName').
 	}
 	else
 	{  
-		//var form = $('#form0');
-		//form.submit(function () {
- 
+		
 		$.ajax({
 				type:"post",
  				url: "/teens/register",
@@ -57,15 +55,6 @@ var dataString = "firstName="+$('#firstName').val()+"&lastName="+$('#lastName').
 
 				}
 			});
-	
-			//return false;
-		//});
-
-//		$.post('/teens/register', $('#firstName').serialize(), $('#lastName').serialize(), $('#grade').serialize(), $('#age').serialize(), $('#school').serialize(), $('#homeAddress').serialize(), $('#homeCity').serialize(), $('#homeZIP').serialize(), $('#cellularPhone').serialize(), $('#homePhone').serialize(), $('#studentEmail').serialize(), $('#pgFirst').serialize(), $('#pgLast').serialize(), $('#pgPhone').serialize(), $('#pgEmail').serialize(), $('#session1').serialize(), $('#session2').serialize(), $('#session3').serialize(), $('#session4').serialize(), function(responseText) { 
-//                $('#status').text(responseText); } );
-
-		//alert("Submitted");
-		
 
 	}
 
