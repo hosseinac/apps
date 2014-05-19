@@ -8,11 +8,7 @@ import register.createRegistration;
 
 public class registerController extends HttpServlet 
 {
-    private String loginUser;
-    private String loginPwd;
-    private String loginUrl;
-    private String group;
-
+   
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
     {
 
@@ -42,9 +38,8 @@ public class registerController extends HttpServlet
 
 	createRegistration registration = new createRegistration(firstName, lastName, grade, age, school, homeAddress, homeCity, homeZIP, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2, session3, session4);
 	session.setAttribute("registration", registration);
-	String registrationStatus = (String)session.getAttribute("registration");
-
-	response.getWriter().write(registrationStatus);
+	
+	response.getWriter().write("Hello "+firstName+" "+lastName);
 
 	//String address = "createRegistration.jsp";
 	//RequestDispatcher rd = request.getRequestDispatcher(address);
