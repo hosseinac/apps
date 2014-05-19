@@ -76,6 +76,7 @@ border:6px solid gold;
 	<br>
 
 	<center>
+	<div id="status"></div>
 	<font face=arial color=gold size=6><b>Student Registration</font>
 	<table>
 		<tr>	
