@@ -41,9 +41,9 @@ public class registerController extends HttpServlet
 	
 	response.getWriter().write("Hello "+firstName+" "+lastName);
 
-	//String address = "createRegistration.jsp";
-	//RequestDispatcher rd = request.getRequestDispatcher(address);
-	//rd.forward(request, response);
+	String address = "createRegistration.jsp";
+	RequestDispatcher rd = request.getRequestDispatcher(address);
+	rd.forward(request, response);
 	
     }
 
