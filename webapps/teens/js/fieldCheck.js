@@ -57,7 +57,7 @@ var dataString = "firstName="+$('#firstName').val()+"&lastName="+$('#lastName').
 					if ( regStatus == "SUCCESS" )
 					{
 	
-						document.write("Hello "+firstName+" "+lastName+". Thank you for registering for the teen summit.");
+						document.write("Hello "+$('#firstName').val()+" "+$('#lastName').val()+". Thank you for registering for the teen summit.");
 						//window.location.replace("/teens/createRegistration.jsp");
 					}
 					else
