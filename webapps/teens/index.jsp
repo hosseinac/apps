@@ -1,65 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <script src="/teens/js/jquery-2.1.1.min.js"></script>
-
 <script src="/teens/js/fieldCheck.js"></script>
-
-<style> 
-
-#element0
-{
-
-width:1335px;
-height:600px;
-overflow:hidden;
-
-background:gold;
-border-top-right-radius:10px;
-border-top-left-radius:10px;
-border-bottom-right-radius:10px;
-border-bottom-left-radius:10px;
-
-}
-
-
-#element1
-{
-
-width:1305px;
-height:570px;
-overflow:hidden;
-
-background:navy;
-border-top-right-radius:12em;
-border-top-left-radius:12em;
-border-bottom-right-radius:12em;
-border-bottom-left-radius:12em;
-
-}
-
-#element2
-{
-
-width:1335px;
-height:600px;
-overflow:hidden;
-
-border:2px solid gold;
-background:navy;
-border-top-right-radius:5em;
-border-top-left-radius:5em;
-
-}
-
-#hdimg
-{
-border:6px solid gold;
-}
-
-
-</style>
+<link href="layout.css" rel="stylesheet" type="text/css">
 </head>
 
 <body bgcolor=navy>

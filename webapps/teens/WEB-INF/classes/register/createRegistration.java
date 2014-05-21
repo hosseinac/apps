@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 
 public class createRegistration
 {
-    String registration = "";    
+    int registration = 0;    
 
     public createRegistration(String firstName, String lastName, String grade, String age, String school, String homeAddress, String homeCity, String homeZIP, String cellularPhone, String homePhone, String studentEmail, String pgFirst, String pgLast, String pgPhone, String pgEmail, String session1, String session2, String session3, String session4) 
     {
@@ -39,12 +39,15 @@ public class createRegistration
 
             stmt = con.createStatement();
              
-            stmt.executeUpdate("insert into register (firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2) values ('"+firstName+"','"+lastName+"','"+grade+"','"+age+"','"+school+"','"+homeAddress+"','"+homeCity+"','"+homeZIP+"','"+cellularPhone+"','"+homePhone+"','"+studentEmail+"','"+pgFirst+"','"+pgLast+"','"+pgPhone+"','"+pgEmail+"','"+session1+"','"+session2+"')");
+            stmt.executeUpdate("insert into register (firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2) values ('"+firstName+"','"+lastName+"','"+grade+"','"+age+"','"+school+"','"+homeAddress+"','"+homeCity+"','"+homeZIP+"','"+cellularPhone+"','"+homePhone+"','"+studentEmail+"','"+pgFirst+"','"+pgLast+"','"+pgPhone+"','"+pgEmail+"','"+session1+"','"+session2+"') RETURNING regId");
             
-            //registration = "Hello "+firstName+" "+lastName+".  Thank you for registering for the teen summit.";
+	    rs = stmt.getGeneratedKeys();
+	    
+	    if ( rs.next() )
+            {
+                 registration = rs.getInt(1);
+ 	    }
 
-            registration = "SUCCESS";
- 
 	    stmt.close();
 	    con.close();
 	    ctx.close();
@@ -53,19 +56,19 @@ public class createRegistration
 	catch(NamingException e)
 	{
 
-            registration = e.toString();
+            registration = -1; //e.toString();
 
         } 
 	catch (SQLException e) 
 	{
 
-            registration = e.toString();
+            registration = -2; //e.toString();
 
         }
 			
     }
     
-    public String getRegistration()
+    public int getRegistration()
     {
 	return(registration);
     }
