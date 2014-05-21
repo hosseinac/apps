@@ -39,8 +39,9 @@ public class registerController extends HttpServlet
 	createRegistration registration = new createRegistration(firstName, lastName, grade, age, school, homeAddress, homeCity, homeZIP, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2, session3, session4);
 	
 	int status = registration.getRegistration();
+	String statusStr = String.valueOf(status);
 
-	response.getWriter().write(status);
+	response.getWriter().write(statusStr);
 		
     }
 
