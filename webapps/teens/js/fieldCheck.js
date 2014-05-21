@@ -89,7 +89,7 @@ if ( obj['Financial Literacy'] > 1 || obj['Abstinence'] || obj['Substance Abuse'
 					//}
 					//else
 					//{
-						alert(regStatus);
+						document.write(regStatus);
 					//}
 
 				}
