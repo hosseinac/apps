@@ -3,7 +3,7 @@
 <head>
 <script src="/teens/js/jquery-2.1.1.min.js"></script>
 <script src="/teens/js/fieldCheck.js"></script>
-<link href="layout.css" rel="stylesheet" type="text/css">
+<link href="/teens/layout.css" rel="stylesheet" type="text/css">
 </head>
 
 <body bgcolor=navy>
