@@ -67,7 +67,7 @@ public class createRegistration
 	    
 	    if ( rs.next() )
             {
-                 int registrationInt = rs.getInt(1);
+                 int registrationInt = rs.getInt(10);
 		 registration = String.valueOf(registrationInt);
  	    }
 	
