@@ -70,7 +70,7 @@ public class createRegistration
     
     public int getRegistration()
     {
-	return(registration);
+	return registration;
     }
 
 }
