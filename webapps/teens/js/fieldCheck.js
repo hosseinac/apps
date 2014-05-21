@@ -79,7 +79,7 @@ if ( obj['Financial Literacy'] > 1 || obj['Abstinence'] || obj['Substance Abuse'
  				data:dataString,
  				success: function (msg) {
 
-				regStatus = parseInt(msg); 
+				regStatus = +msg; 
 				
 					if ( regStatus > 0 )
 					{
