@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 
 public class createRegistration
 {
-    int registration = 0;    
+    String registration = "";    
 
     public createRegistration(String firstName, String lastName, String grade, String age, String school, String homeAddress, String homeCity, String homeZIP, String cellularPhone, String homePhone, String studentEmail, String pgFirst, String pgLast, String pgPhone, String pgEmail, String session1, String session2, String session3, String session4) 
     {
@@ -45,9 +45,10 @@ public class createRegistration
 	    
 	    if ( rs.next() )
             {
-                 registration = rs.getInt(1);
+                 int registrationInt = rs.getInt(1);
+		 registration = String.valueOf(registrationInt);
  	    }
-
+	
 	    stmt.close();
 	    con.close();
 	    ctx.close();
@@ -56,21 +57,21 @@ public class createRegistration
 	catch(NamingException e)
 	{
 
-            registration = -1; //e.toString();
+            registration = e.toString();
 
         } 
 	catch (SQLException e) 
 	{
 
-            registration = -2; //e.toString();
+            registration = e.toString();
 
         }
 			
     }
     
-    public int getRegistration()
+    public String getRegistration()
     {
-	return registration;
+	return(registration);
     }
 
 }
