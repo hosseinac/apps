@@ -39,7 +39,7 @@ public class createRegistration
 
             stmt = con.createStatement();
              
-            stmt.executeUpdate("insert into register (firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2) values ('"+firstName+"','"+lastName+"','"+grade+"','"+age+"','"+school+"','"+homeAddress+"','"+homeCity+"','"+homeZIP+"','"+cellularPhone+"','"+homePhone+"','"+studentEmail+"','"+pgFirst+"','"+pgLast+"','"+pgPhone+"','"+pgEmail+"','"+session1+"','"+session2+"') RETURNING regId");
+            stmt.executeUpdate("insert into register (firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2) values ('"+firstName+"','"+lastName+"','"+grade+"','"+age+"','"+school+"','"+homeAddress+"','"+homeCity+"','"+homeZIP+"','"+cellularPhone+"','"+homePhone+"','"+studentEmail+"','"+pgFirst+"','"+pgLast+"','"+pgPhone+"','"+pgEmail+"','"+session1+"','"+session2+"')");
             
 	    rs = stmt.getGeneratedKeys();
 	    
