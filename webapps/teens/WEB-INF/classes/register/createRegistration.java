@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.PreparedStatement;
  
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -25,7 +25,7 @@ public class createRegistration
     {
 	Context ctx = null;
        	Connection con = null;
-        Statement stmt = null;
+        PreparedStatement stmt = null;
         ResultSet rs = null;
 
         try
@@ -37,10 +37,33 @@ public class createRegistration
              
             con = ds.getConnection();
 
-            stmt = con.createStatement();
-             
-            stmt.executeUpdate("insert into register (firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2) values ('"+firstName+"','"+lastName+"','"+grade+"','"+age+"','"+school+"','"+homeAddress+"','"+homeCity+"','"+homeZIP+"','"+cellularPhone+"','"+homePhone+"','"+studentEmail+"','"+pgFirst+"','"+pgLast+"','"+pgPhone+"','"+pgEmail+"','"+session1+"','"+session2+"')");
+	    String stmtStr = "insert into register (firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2, session3, session4) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             
+            stmt = con.prepareStatement(stmtStr, stmt.RETURN_GENERATED_KEYS);
+
+	    stmt.setString(1, firstName);
+ 	    stmt.setString(2, lastName);
+ 	    stmt.setString(3, grade);
+            stmt.setString(4, school);
+            stmt.setString(5, homeAddress);
+            stmt.setString(6, homeCity);
+            stmt.setString(7, homeZIP);
+            stmt.setString(8, firstName);
+            stmt.setString(9, firstName);
+            stmt.setString(10, firstName);
+            stmt.setString(11, firstName);
+            stmt.setString(12, firstName);
+            stmt.setString(13, firstName);
+            stmt.setString(14, firstName);
+            stmt.setString(15, firstName);
+            stmt.setString(16, firstName);
+            stmt.setString(17, firstName);
+            stmt.setString(18, firstName);
+            stmt.setString(19, firstName);
+            stmt.setString(20, firstName);
+               
+            stmt.executeUpdate();
+
 	    rs = stmt.getGeneratedKeys();
 	    
 	    if ( rs.next() )
