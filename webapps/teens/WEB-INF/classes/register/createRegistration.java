@@ -37,7 +37,7 @@ public class createRegistration
              
             con = ds.getConnection();
 
-	    String stmtStr = "insert into register (firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2, session3, session4) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	    String stmtStr = "insert into register (firstName, lastName, grade, age, school, homeaddress, homecity, homezip, cellularPhone, homePhone, studentEmail, pgFirst, pgLast, pgPhone, pgEmail, session1, session2, session3, session4) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             
             stmt = con.prepareStatement(stmtStr, stmt.RETURN_GENERATED_KEYS);
 
@@ -60,8 +60,7 @@ public class createRegistration
             stmt.setString(17, firstName);
             stmt.setString(18, firstName);
             stmt.setString(19, firstName);
-            stmt.setString(20, firstName);
-               
+                          
             stmt.executeUpdate();
 
 	    rs = stmt.getGeneratedKeys();
