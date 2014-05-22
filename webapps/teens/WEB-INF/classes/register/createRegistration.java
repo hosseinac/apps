@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
- 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -65,21 +64,16 @@ public class createRegistration
 
 	    rs = stmt.getGeneratedKeys();
 
-	   tableMetaData = rs.getMetaData();
 	   while (rs.next())
 	   {
-    		for (int i = 1; i < tableMetaData.getColumnCount() + 1; i++)
+    		for (int i = 1; i < rs.getMetaData().getColumnCount() + 1; i++)
     		{
-       			registration = rs.getString('regid');
+       			registration = rs.getString("regid");
     		}
-	  }
+	   }
 	    
-	    //if ( rs.next() )
-            //{
-              //   Long registrationInt = rs.getLong(1);
-		 //registration = "success";//String.valueOf(registrationInt);
- 	    //}
-	
+	    
+	    rs.close();
 	    stmt.close();
 	    con.close();
 	    ctx.close();
