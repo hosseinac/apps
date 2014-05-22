@@ -67,7 +67,7 @@ public class createRegistration
 	    
 	    if ( rs.next() )
             {
-                 int registrationInt = rs.getInt(1);
+                 Long registrationInt = rs.getLong(1);
 		 registration = String.valueOf(registrationInt);
  	    }
 	
