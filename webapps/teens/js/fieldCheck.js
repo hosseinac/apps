@@ -81,16 +81,16 @@ if ( obj['Financial Literacy'] > 1 || obj['Abstinence'] || obj['Substance Abuse'
 
 				regStatus = msg; 
 				
-					//if ( regStatus > 0 )
-					//{
+					if ( regStatus > 0 )
+					{
 	
 						//document.write("Hello "+$('#firstName').val()+" "+$('#lastName').val()+". Thank you for registering for the teen summit.");
-						//window.location.replace("/teens/createRegistration.jsp?firstName="+$('#firstName').val()+"&lastName="+$('#lastName').val()+"&regId="+regStatus);
-					//}
-					//else
-					//{
+						window.location.replace("/teens/createRegistration.jsp?firstName="+$('#firstName').val()+"&lastName="+$('#lastName').val()+"&regId="+regStatus);
+					}
+					else
+					{
 						document.write(regStatus);
-					//}
+					}
 
 				}
 			});
