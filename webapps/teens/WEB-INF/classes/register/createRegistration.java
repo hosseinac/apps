@@ -64,12 +64,21 @@ public class createRegistration
             stmt.executeUpdate();
 
 	    rs = stmt.getGeneratedKeys();
+
+	   tableMetaData = rs.getMetaData();
+	   while (rs.next())
+	   {
+    		for (int i = 1; i < tableMetaData.getColumnCount() + 1; i++)
+    		{
+       			registration = rs.getString('regid');
+    		}
+	  }
 	    
-	    if ( rs.next() )
-            {
-                 Long registrationInt = rs.getLong(1);
-		 registration = "success";//String.valueOf(registrationInt);
- 	    }
+	    //if ( rs.next() )
+            //{
+              //   Long registrationInt = rs.getLong(1);
+		 //registration = "success";//String.valueOf(registrationInt);
+ 	    //}
 	
 	    stmt.close();
 	    con.close();
