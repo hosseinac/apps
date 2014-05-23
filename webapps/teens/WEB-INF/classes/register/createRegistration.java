@@ -43,23 +43,23 @@ public class createRegistration
 	    stmt.setString(1, firstName);
  	    stmt.setString(2, lastName);
  	    stmt.setString(3, grade);
-            stmt.setString(4, school);
-            stmt.setString(5, homeAddress);
-            stmt.setString(6, homeCity);
-            stmt.setString(7, homeZIP);
-            stmt.setString(8, firstName);
-            stmt.setString(9, firstName);
-            stmt.setString(10, firstName);
-            stmt.setString(11, firstName);
-            stmt.setString(12, firstName);
-            stmt.setString(13, firstName);
-            stmt.setString(14, firstName);
-            stmt.setString(15, firstName);
-            stmt.setString(16, firstName);
-            stmt.setString(17, firstName);
-            stmt.setString(18, firstName);
-            stmt.setString(19, firstName);
-                          
+	    stmt.setString(4, age);
+            stmt.setString(5, school);
+            stmt.setString(6, homeAddress);
+            stmt.setString(7, homeCity);
+            stmt.setString(8, homeZIP);
+            stmt.setString(9, cellularPhone);
+            stmt.setString(10, homePhone);
+            stmt.setString(11, studentEmail);
+            stmt.setString(12, pgFirst);
+            stmt.setString(13, pgLast);
+            stmt.setString(14, pgPhone);
+            stmt.setString(15, pgEmail);
+            stmt.setString(16, session1);
+            stmt.setString(17, session2);
+            stmt.setString(18, session3);
+            stmt.setString(19, session4);
+                           
             stmt.executeUpdate();
 
 	    rs = stmt.getGeneratedKeys();
