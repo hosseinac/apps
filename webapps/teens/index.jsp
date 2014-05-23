@@ -15,7 +15,7 @@
 	<br>
 	<center>
 	<table>
-		<tr><td><center><font face=impact color=gold size=10>Teen Summit<br>October 17, 2014</font><br><font face=impact color=gold size=6>Sponsored by the Weldon High School Class of 2004</font></center></td></tr>
+		<tr><td><center><font face=Impact color=gold size=10>Teen Summit<br>October 17, 2014</font><br><font face=impact color=gold size=6>Sponsored by the Weldon High School Class of 2004</font></center></td></tr>
 	</table>
 	</center>
 	<br>
